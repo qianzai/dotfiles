@@ -1,9 +1,0 @@
-[user]
-	name = Bzm
-	email = mail@bzm.ink
-[credential]
-	helper = store
-[i18n]
-	logoutputencoding = utf-8
-[core]
-	quotepath = false
