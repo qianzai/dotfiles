@@ -1,0 +1,41 @@
+# Path to your oh-my-zsh installation.
+export ZSH="/home/bzm/.oh-my-zsh"
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# plugs
+plugins=(
+	git
+	sudo
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	zsh-vi-mode
+)
+
+# source
+source $ZSH/oh-my-zsh.sh
+
+# source ~/.config/zsh/zshrc
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/env.zsh
+source ~/.config/zsh/fzf.zsh
+
+ZVM_VI_EDITOR="nvim"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+rg() {
+    if [ -z "$RANGER_LEVEL" ]
+    then
+        ranger
+    else
+        exit
+    fi
+}
+
+source /usr/share/nvm/init-nvm.sh
+
+clear
+
+neofetch

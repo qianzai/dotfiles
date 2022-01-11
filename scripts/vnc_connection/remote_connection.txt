@@ -1,0 +1,2 @@
+rdesktop -f -u Bzm -p 990521 192.168.25.233
+rdesktop -f -u Administrator -p Bzm990521@tx 159.75.136.164
