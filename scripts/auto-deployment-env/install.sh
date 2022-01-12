@@ -4,7 +4,7 @@
 # Date: 2021-08-18 13:58
 # Description: 所有的依赖包
 
-pacman -S net-tools openssh wget curl base-devel xorg networkmanager bc firewalld pcsclite zsh \
+pacman -S net-tools openssh wget curl base-devel xorg networkmanager acpi bc firewalld pcsclite zsh \
 	imwheel \
 	dunst \
 	alsa-utils \
@@ -25,10 +25,11 @@ pacman -S net-tools openssh wget curl base-devel xorg networkmanager bc firewall
 	# 锁屏
 	betterlockscreen \
 	# 字体
-	noto-fonts-emoji noto-fonts nerd-fonts-source-code-pro wqy-microhei ttf-dejavu \
+	noto-fonts-emoji noto-fonts nerd-fonts-complete wqy-microhei ttf-dejavu \
 	fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-moegirl fcitx5-material-color \
 	shellcheck
 
 yay -S wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts \
 	python-xlsx2csv \
+	acpitool \
 	libxft-bgra
