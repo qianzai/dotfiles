@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sleep 10
+sleep 5
 
-dunst &
+xfce4-notifyd &
 
 fcitx5 -d
 
