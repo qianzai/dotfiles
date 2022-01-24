@@ -12,7 +12,7 @@ main() {
 	cat -n $REMOTE_CONNECTION
 	while true; do
 		read -p "请输入要执行的操作编号:" NUM
-		$(awk 'NR==2' $REMOTE_CONNECTION)
+		$(awk "NR==$NUM" $REMOTE_CONNECTION)
 		break
 	done
 }

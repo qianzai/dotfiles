@@ -24,6 +24,9 @@ pacman -S net-tools openssh wget curl base-devel xorg networkmanager acpi bc fir
 	rdesktop \
 	# 锁屏
 	betterlockscreen \
+	trash-cli \
+	ventoy-bin \
+	unoconv pandoc \
 	# 字体
 	noto-fonts-emoji noto-fonts nerd-fonts-complete wqy-microhei ttf-dejavu \
 	fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-moegirl fcitx5-material-color \

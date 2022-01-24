@@ -15,6 +15,7 @@ export IDENTIFIER="unicode"
 . "$DIR/dwmbar-functions/dwm_bat.sh"
 . "$DIR/dwmbar-functions/dwm_alsa.sh"
 . "$DIR/dwmbar-functions/dwm_men.sh"
+. "$DIR/dwmbar-functions/dwm_weather.sh"
 # . "$DIR/dwmbar-functions/dwm_networkmanager.sh"
 . "$DIR/dwmbar-functions/dwm_isrun.sh"
 
@@ -26,6 +27,7 @@ get_bytes
 upperbar=""
 upperbar="$upperbar$(print_fcitx) "
 upperbar="$upperbar[ $(dwm_men)  $(dwm_alsa) ] "
+# upperbar="$upperbar$(dwm_weather) "
 upperbar="$upperbar$(dwm_bat) "
 upperbar=" $upperbar$(print_date) "
 

@@ -10,7 +10,6 @@ blueman-applet &
 /bin/bash ~/scripts/tap-to-click.sh &
 /bin/bash ~/scripts/inverse-scroll.sh &
 /bin/bash ~/scripts/autostart_wait.sh &
-# xfce4-power-manager &
 #kdeconnect-indicator &
 #xfce4-volumed-pulse &
 #/bin/bash ~/scripts/run-mailsync.sh &
