@@ -25,7 +25,7 @@ get_bytes
 # xsetroot -name " $(print_clash)  $(print_fcitx) [ 💿 $(print_mem)M ⬆$vel_trans ⬇$vel_recv $(dwm_alsa) ] $(dwm_weather) $(print_bat) $(print_date) "
 
 upperbar=""
-upperbar="$upperbar$(print_fcitx) "
+# upperbar="$upperbar$(print_fcitx) "
 upperbar="$upperbar[ $(dwm_men)  $(dwm_alsa) ] "
 # upperbar="$upperbar$(dwm_weather) "
 upperbar="$upperbar$(dwm_bat) "

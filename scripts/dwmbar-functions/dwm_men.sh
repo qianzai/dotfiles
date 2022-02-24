@@ -5,8 +5,8 @@
 # GNU GPLv3
 
 dwm_men () {
-	memfree=$(($(grep -m1 'MemAvailable:' /proc/meminfo | awk '{print $2}') / 1024))
-	printf "💿 %sM" "$memfree"
+	memfree=$(echo "scale=2; $(grep -m1 'MemAvailable:' /proc/meminfo | awk '{print $2}')/1048576" | bc)
+	printf "💿 %sG" "$memfree"
 }
 
 dwm_men
