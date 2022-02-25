@@ -18,21 +18,33 @@ get_time_until_charged() {
 }
 
 dwm_bat(){
-	if $(acpi -b | grep --quiet Discharging)
-	then
-		battery_status="🔋"
-	else
-		battery_status="🔌"
-	fi
 	# get charge of all batteries, combine them
 	total_charge=$(expr $(acpi -b | awk '{print $4}' | grep -Eo "[0-9]+" | paste -sd+ | bc));
 
 	# get amount of batteries in the device
 	battery_number=$(acpi -b | wc -l);
 
-	percent=$(expr $total_charge / $battery_number)%;
+	percent=$(expr $total_charge / $battery_number);
 
-	printf "[ %s %s ]" $battery_status $percent
+	if $(acpi -b | grep --quiet Discharging)
+	then
+        if [ $percent -ge 90 -a $percent -lt 100 ]; then
+			battery_status="🔋"
+		elif [ $percent -ge 65 -a $percent -lt 90 ]; then
+			battery_status=""
+		elif [ $percent -ge 40 -a $percent -lt 65 ]; then
+			battery_status=""
+		elif [ $percent -ge 25 -a $percent -lt 40 ]; then
+			battery_status=""
+		elif [ $percent -lt 25 ]; then
+			battery_status=""
+		fi
+		printf "[ %s %s%s ]" $battery_status $percent %
+	else
+		battery_status="🔌"
+		printf "[ %s %s%s ]" $battery_status $percent %
+	fi
+
 
 }
 

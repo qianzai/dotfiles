@@ -26,9 +26,9 @@ get_bytes
 
 upperbar=""
 # upperbar="$upperbar$(print_fcitx) "
-upperbar="$upperbar[ $(dwm_men)  $(dwm_alsa) ] "
+upperbar="$upperbar^c#fff1b8^[ $(dwm_men)  $(dwm_alsa) ] "
 # upperbar="$upperbar$(dwm_weather) "
-upperbar="$upperbar$(dwm_bat) "
-upperbar=" $upperbar$(print_date) "
+upperbar="$upperbar^c#bae7ff^$(dwm_bat) "
+upperbar=" $upperbar^c#ffa39e^$(print_date) "
 
 xsetroot -name "$upperbar"
