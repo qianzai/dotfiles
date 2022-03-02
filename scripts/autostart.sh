@@ -1,6 +1,7 @@
 #!/bin/bash
 kill $(ps -ef |grep /home/bzm/scripts/ |awk '{print $2}')
 
+xmodmap /home/bzm/.Xmodmap
 nm-applet &
 blueman-applet &
 
